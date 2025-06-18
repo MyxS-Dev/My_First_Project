@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Montserrat";
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: auto;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, rgb(212, 182, 182), rgb(114, 114, 194), rgb(103, 104, 134));
+    position: relative;
+}
+
+.container-website {
+    min-height: 100% !important; 
+    display: flex;
+    flex-direction: column;
+  }
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    height: 130px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+    transition: ease 0.25s;
+}
+
+footer a {
+    transition: ease 0.25s;
+}
+
+footer a:hover {
+    opacity: 0.6;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: ease 0.25s; 
+}
+footer ul li:hover {
+    opacity: 0.6;
+}
+
+footer ul li i {
+    cursor: pointer;
+}
+
+/* Navbar */
+.bg-blur {
+    width: 100%;
+    background: linear-gradient(270deg, rgb(187, 154, 154), rgb(65, 65, 117), rgb(56, 57, 92));
+    backdrop-filter: blur(100px);
+}
+
+.navbar {
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(33, 33, 33);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 4px black;
+    margin: 15px 35px 15px 15px;
+}
+
+.navbar-brand img {
+    max-height: 110px;
+}
+
+.nav-link {
+    color: rgb(255, 255, 255);
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #000000;
+}
+
+.config-pos {
+    position: relative;
+}
+
+.nav-link-config::after {
+    content: '';
+    height: 30px;
+    width: 0%;
+    background: linear-gradient(to right, #faf5f5, #ffffff);
+    border-radius: 14px;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    transition: 250ms ease-in-out;
+}
+
+.nav-link-config:hover::after {
+    width: 100%;
+}
+
+.font-color {
+    color: #000;
+    transition: ease 0.3s;
+}
+
+.font-color:hover {
+    opacity: 0.5;
+}
+
+/* Login Form */
+.log-form {
+    width: 285px;
+    height: 65px;
+    margin-right: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 45px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Responsive Adjustments */
+
+
+@media (max-width: 991px) {
+    .appear {
+        display: none !important;
+    }
+
+    .log-form {
+        width: 100%; /* Đảm bảo form chiếm toàn bộ chiều rộng */
+    }
+
+    .log-form ul {
+        width: 350px;
+        flex-direction: row; /* Đặt các item theo chiều dọc */
+    }
+
+    .config-pos {
+        position: relative;
+    }
+
+    .nav-link-config::after {
+        content: '';
+        height: 30px;
+        width: 0%;
+        background: linear-gradient(to right, #faf5f5, #ffffff);
+        border-radius: 5px;
+        position: absolute;
+        left: 0;
+        z-index: -1;
+        transition: 250ms ease-in-out;
+    }
+    
+    .nav-link-config:hover::after {
+        width: 20%;
+    }
+
+    .navbar-brand {
+        width: 120px;
+        height: 120px;
+        background-color: rgb(33, 33, 33);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 5px black;
+        margin-bottom: 15px;
+    }
+    
+    .navbar-brand img {
+        max-height: 90px;
+    }
+}
+
+/* HOT SALE */
+.background {
+    margin: auto;
+    display: flex;
+    align-items: center; 
+    width: 98vw;
+    height: 620px;
+    background: linear-gradient(45deg, #4682B4, #87c0da, #e2b0b0);
+    border-radius: 15px;
+    box-shadow: 0 0 12px 0px rgba(0, 0, 0, 0.6);
+}
+
+.danh-muc {
+    padding: 0;
+    margin-left: 20px;
+    width: 230px;
+    height: 490px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 8px 0px rgb(90, 89, 89);
+}
+
+.danh-muc-con {
+    padding-left: 8px;
+    width: 230px;
+    height: 490px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+i {
+    font-size: 22px;
+}
+
+.icon {
+    margin-left: 10px;
+    width: 40px;
+    line-height: 10px;
+}
+
+.the-loai {
+    text-decoration: none;
+    font-weight:600;
+    font-size: 14px;
+    color: black;
+}
+
+.nhom-danh-muc {
+    width: 210px;
+    height: 35px;
+    border-radius: 18px;
+    transition: ease 0.25s;
+    display: flex;
+    align-items: center;
+}
+
+.nhom-danh-muc:hover {
+    cursor: pointer;
+    background-color: #000000;
+    color: #FFF;
+    box-shadow: 0 0 5px #000;
+}
+
+.nhom-danh-muc:hover .the-loai {
+    color: #FFF;
+}
+
+.hot-icon{
+    font-size: 32px;
+    margin-right: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.hot-text {
+    font-size: 30px;
+    font-weight:600;
+    color: rgb(255, 255, 255);
+}
+
+.hot-sale {
+    margin: auto;
+    display: flex;
+    background-color: rgba(255, 0, 0, 0.786);
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    cursor: default;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 2px 4px black;
+}
+
+.heart-text {
+    margin-bottom: 0;
+    margin-right: 5px;
+    cursor: default;
+}
+
+.heart {
+    transition: ease 0.3s;
+}
+
+.heart:hover {
+    color: rgb(246, 34, 34);
+    cursor: pointer;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .background {
+        width: 98vw;
+        height: 550px;
+    }
+
+    .danh-muc {
+        width: 200px;
+        height: 400px;
+    }
+
+    .danh-muc-con {
+        width: 180px;
+        height: 400px;
+    }
+
+    .nhom-danh-muc {
+        width: 180px;
+        height: 30px;
+        border-radius: 18px;
+    }
+    
+    .nhom-danh-muc:hover {
+        cursor: pointer;
+        background-color: #e6e6e6;
+        transition: ease 0.3s;
+    }
+
+    .the-loai {
+        text-decoration: none;
+        font-weight:600;
+        font-size: 11px;
+        color: black;
+    }
+
+    .card {
+        height: 400px;
+    }
+
+    .container {
+        width: 620px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .background {
+        width: 98vw;
+        height: 480px;
+    }
+
+    .danh-muc {
+        width: 170px;
+        height: 350px;
+    }
+
+    .danh-muc-con {
+        width: 170px;
+        height: 350px;
+    }
+
+    .nhom-danh-muc {
+        width: 150px;
+        height: 30px;
+        border-radius: 18px;
+    }
+    
+    .nhom-danh-muc:hover {
+        cursor: pointer;
+        background-color: #e6e6e6;
+        transition: ease 0.3s;
+    }
+
+    .the-loai {
+        text-decoration: none;
+        font-weight:600;
+        font-size: 9px;
+        color: black;
+    }
+
+    .card {
+        height: 370px;
+    }
+}
+
+.featured-product {
+    width: 360px;
+    height: 60px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 0, 0, 0.8);
+    border-radius: 40px;
+    color: #fff;
+    box-shadow: 0px 2px 8px black;
+    text-shadow: 0 2px 4px black;
+}
+
+.background-product {
+    width: 93vw;
+    height: 1040px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 1px 1px 6px 0px black;
+    margin: auto;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.specifications {
+    margin-bottom: 12px;
+}
+
+        /* BANNER 1 */
+.container-layout {
+    width: 94vw;
+    display: flex;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.left-layout {
+    flex: 6 ;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 14px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.75);
+    background-image: url(img/asus-banner.jpg);
+    background-position: bottom;
+    background-size: 1500px;
+}
+
+.main-distance {
+    flex: 0.3;
+}
+
+.right-layout {
+    flex: 3;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 14px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.75);
+    background-image: url(img/HOME_R12_MX-KV_1440X810_pc.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.content-layout {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+}
+
+    /* BANNER 2 */
+.container-layout2 {
+    width: 94vw;
+    display: flex;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.left-layout2 {
+    flex: 3 ;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 14px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.75);
+    background-image: url(img/i0m8aokbv2dngsqb-2_0_desktop_1_1X.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.main-distance2 {
+    flex: 0.3;
+}
+
+.right-layout2 {
+    flex: 6;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 14px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.75);
+    background-image: url(img/PC_1.jpg);
+    background-position: top;
+    background-size: cover;
+}
+
+.content-layout2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.video-introduce {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.video-introduce iframe {
+    border-radius: 20px;
+}
+
+.main-layout {
+    flex: 1;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 14px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.75);
+    background-image: url(img/4bikruwdk5i5dvcy-0_0_desktop_0_1X.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 2000px;
+}
+
+.moreProduct {
+    font-size: 28px;
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 6px black;
+    transition: ease 0.2s;
+}
+
+.moreProduct:hover {
+    transform: translateY(10px);
+}
+
+/* SETTINGS - USER PAGE */
+.settings {
+    margin: 0 12px 0 6px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: ease 0.3s;
+}
+
+.settings:hover {
+    transform: rotate(180deg);
+}

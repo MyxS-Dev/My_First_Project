@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Montserrat";
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: auto;
+    width: 100%;
+    height: 1200px;
+    background: linear-gradient(90deg, rgb(203, 155, 155), rgb(100, 100, 191), rgb(103, 104, 134));
+    position: relative;
+}
+
+.container-website {
+    min-height: 100% !important; 
+    display: flex;
+    flex-direction: column;
+  }
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    height: 130px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+    transition: ease 0.25s;
+}
+
+footer a {
+    transition: ease 0.25s;
+}
+
+footer a:hover {
+    opacity: 0.6;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: ease 0.25s; 
+}
+footer ul li:hover {
+    opacity: 0.6;
+}
+
+footer ul li i {
+    cursor: pointer;
+}
+
+/* Navbar */
+.bg-blur {
+    width: 100%;
+    background: linear-gradient(270deg, rgb(187, 154, 154), rgb(65, 65, 117), rgb(56, 57, 92));
+    backdrop-filter: blur(100px);
+}
+
+.navbar {
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(33, 33, 33);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 4px black;
+    margin: 15px 35px 15px 15px;
+}
+
+.navbar-brand img {
+    max-height: 110px;
+}
+
+.nav-link {
+    color: rgb(255, 255, 255);
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #000000;
+}
+
+.config-pos {
+    position: relative;
+}
+
+.nav-link-config::after {
+    content: '';
+    height: 30px;
+    width: 0%;
+    background: linear-gradient(to right, #faf5f5, #ffffff);
+    border-radius: 14px;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    transition: 250ms ease-in-out;
+}
+
+.nav-link-config:hover::after {
+    width: 100%;
+}
+
+.font-color {
+    color: #000;
+    transition: ease 0.3s;
+}
+
+.font-color:hover {
+    opacity: 0.5;
+}
+
+/* Login Form */
+.log-form {
+    width: 285px;
+    height: 45px;
+    margin-right: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 45px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Responsive */
+
+
+@media (max-width: 991px) {
+    .appear {
+        display: none !important;
+    }
+
+    .log-form {
+        width: 100%; 
+    }
+
+    .log-form ul {
+        width: 350px;
+        flex-direction: row;
+    }
+
+    .config-pos {
+        position: relative;
+    }
+
+    .nav-link-config::after {
+        content: '';
+        height: 30px;
+        width: 0%;
+        background: linear-gradient(to right, #faf5f5, #ffffff);
+        border-radius: 5px;
+        position: absolute;
+        left: 0;
+        z-index: -1;
+        transition: 250ms ease-in-out;
+    }
+    
+    .nav-link-config:hover::after {
+        width: 20%;
+    }
+
+    .navbar-brand {
+        width: 120px;
+        height: 120px;
+        background-color: rgb(33, 33, 33);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 5px black;
+        margin-bottom: 15px;
+    }
+    
+    .navbar-brand img {
+        max-height: 90px;
+    }
+}
+
+.totalPurchase {
+    height: 510px;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+
+.voucher {
+    height: 60px;
+    margin: 15px 0 15px 10px;
+}
+
+.voucher input {
+    height: 36px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    padding: 0 0 0 10px;
+    margin: 0 25px 0 0;
+    font-weight: 400;
+    color: #fff;
+}
+
+.voucher input::placeholder {
+    color: white;
+}
+
+.totalPrice {
+    margin: 15px 30px 15px 14px;
+    color: white;
+    text-shadow: 0 0 6px black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary {
+    margin: 15px 30px 15px 20px;
+    color: white;
+    text-shadow: 0 0 6px black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.center-purchase {
+    display: flex;
+    justify-content: center;
+}
+
+.purchase {
+    width: 65%;
+    height: 50px;
+    margin: 15px 0 25px 17px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: ease 0.35s;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+.purchase:hover {
+    background-color: black;
+    color: white;
+}
+
+.hover-style {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    transition: ease 0.3s;
+    font-weight: 500;
+}
+
+.hover-style:hover {
+    background-color: #000;
+    color: #fff;
+}

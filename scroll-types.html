@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Effects Demo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Section chung */
+        .section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        /* 1. Parallax Scroll */
+        .parallax {
+            background-image: url('https://source.unsplash.com/1600x900/?nature');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* 2. Scroll Snap */
+        .snap-container {
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
+        }
+
+        .snap-section {
+            scroll-snap-align: start;
+            background-color: teal;
+        }
+
+        /* 3. Horizontal Scroll */
+        .horizontal-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            white-space: nowrap;
+        }
+
+        .horizontal-item {
+            width: 100vw;
+            height: 100vh;
+            scroll-snap-align: start;
+            background-color: darkblue;
+        }
+
+        /* 4. Reveal on Scroll */
+        .hidden {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease-out;
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Parallax Scroll -->
+    <div class="section parallax">Parallax Scroll</div>
+    
+    <!-- Scroll Snap -->
+    <div class="snap-container">
+        <div class="section snap-section">Scroll Snap - Page 1</div>
+        <div class="section snap-section" style="background-color: darkred;">Scroll Snap - Page 2</div>
+    </div>
+    
+    <!-- Horizontal Scroll -->
+    <div class="horizontal-container">
+        <div class="horizontal-item">Horizontal 1</div>
+        <div class="horizontal-item" style="background-color: darkgreen;">Horizontal 2</div>
+    </div>
+    
+    <!-- Reveal on Scroll -->
+    <div class="section hidden" style="background-color: purple;">Reveal Me When Scroll</div>
+
+    <script>
+        // Script để kích hoạt hiệu ứng "Reveal on Scroll"
+        window.addEventListener("scroll", () => {
+            document.querySelectorAll(".hidden").forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight * 0.8) {
+                    el.classList.add("show");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

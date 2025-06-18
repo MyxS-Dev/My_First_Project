@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="login-form.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+
+    <title>Quên mật khẩu</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: "Montserrat";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-log">
+        <form>
+            <h1> QUÊN MẬT KHẨU </h1>
+
+            <div class="input-box">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Mật khẩu mới">
+            </div>
+
+            <div class="input-box">
+                <i class="fa-solid fa-check"></i>
+                <input type="password" placeholder="Xác nhận mật khẩu">
+            </div>
+
+            <div class="log-btn">
+                <button type="submit" onclick="showAlert()" class="btn"> ĐỔI MẬT KHẨU </button>
+            </div>
+            
+            <div class="registration">
+                <p> Quay về trang <a href="DangNhap.html"> Đăng nhập </a> </p>
+            </div>
+        </form>
+
+        <div class="back">
+            <div class="back-text">
+                <i class="fa-solid fa-arrow-left"></i>
+                <a href="GiaoDien.html"> Quay về Trang chủ</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script> 
+        function showAlert() {
+            alert("Đổi mật khẩu thành công !")
+        }
+    </script>
+</body>
+
+</html>

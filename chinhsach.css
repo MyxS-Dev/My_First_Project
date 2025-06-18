@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Montserrat";
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: auto;
+    width: 100%;
+    height: 2300px;
+    background: linear-gradient(90deg, rgb(149, 111, 111), rgb(84, 84, 166), rgb(72, 74, 114));
+}
+
+.container-website {
+    min-height: 100% !important; 
+    display: flex;
+    flex-direction: column;
+  }
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    height: 100px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+    transition: ease 0.25s;
+}
+
+footer a {
+    transition: ease 0.25s;
+}
+
+footer a:hover {
+    opacity: 0.6;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: ease 0.25s; 
+}
+footer ul li:hover {
+    opacity: 0.6;
+}
+
+footer ul li i {
+    cursor: pointer;
+}
+
+/* Navbar */
+.bg-blur {
+    width: 100%;
+    background: linear-gradient(270deg, rgb(187, 154, 154), rgb(65, 65, 117), rgb(56, 57, 92));
+    backdrop-filter: blur(100px);
+}
+
+.navbar {
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(33, 33, 33);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 4px black;
+    margin: 15px 35px 15px 15px;
+}
+
+.navbar-brand img {
+    max-height: 110px;
+}
+
+.nav-link {
+    color: rgb(255, 255, 255);
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #000000;
+}
+
+.config-pos {
+    position: relative;
+}
+
+.nav-link-config::after {
+    content: '';
+    height: 30px;
+    width: 0%;
+    background: linear-gradient(to right, #faf5f5, #ffffff);
+    border-radius: 14px;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    transition: 250ms ease-in-out;
+}
+
+.nav-link-config:hover::after {
+    width: 100%;
+}
+
+.font-color {
+    color: #000;
+    transition: ease 0.3s;
+}
+
+.font-color:hover {
+    opacity: 0.5;
+}
+
+/* Login Form */
+.log-form {
+    width: 285px;
+    height: 45px;
+    margin-right: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Responsive Adjustments */
+
+
+@media (max-width: 991px) {
+    .appear {
+        display: none !important;
+    }
+
+    .log-form {
+        width: 100%; /* Đảm bảo form chiếm toàn bộ chiều rộng */
+    }
+
+    .log-form ul {
+        width: 350px;
+        flex-direction: row; /* Đặt các item theo chiều dọc */
+    }
+
+    .config-pos {
+        position: relative;
+    }
+
+    .nav-link-config::after {
+        content: '';
+        height: 30px;
+        width: 0%;
+        background: linear-gradient(to right, #f76e6e, #ff4f4f);
+        border-radius: 5px;
+        position: absolute;
+        left: 0;
+        z-index: -1;
+        transition: 250ms ease-in-out;
+    }
+    
+    .nav-link-config:hover::after {
+        width: 16%;
+    }
+
+    .navbar-brand {
+        width: 120px;
+        height: 120px;
+        background-color: rgb(33, 33, 33);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 5px black;
+        margin-bottom: 15px;
+    }
+    
+    .navbar-brand img {
+        max-height: 90px;
+    }
+}
+
+.camket {
+    font-size: 17px;
+    color: white;
+    margin: 0 30px 65px 30px;
+    text-shadow: 0 0 15px black;
+    line-height: 30px;
+}
+
+.tieude {
+    font-weight: 600;
+    color: white;
+    margin: 20px 30px 20px 30px;
+    text-shadow: 0 0 18px black;
+}
